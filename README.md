@@ -1,46 +1,27 @@
-# CAtNIPP: Context-Aware Attention-based Network for Informative Path Planning
-A context-aware neural framework for adaptive informative path planning (IPP) problem.
+# CARS
 
-## Run
-#### Training
-1. Install requirements at the bottom.
-2. Set appropriate parameters in `parameters.py`, including `NUM_META_AGENT`, `CUDA_DEVICE`, `BATCH_SIZE` (recommand 256 for every 8GB VRAM).
-3. Name your run with `FOLDER_NAME`.
-4. Run `python driver.py`
+**CARS** employs an off-policy Deep Reinforcement Learning (DRL) framework, effectively circumventing the limitations observed in on-policy approaches and enhancing learning adaptability and efficiency.
 
-#### Evaluation
-1. Set appropriate parameters in `/eval/test_parameters.py`, including `FOLDER_NAME`, `NUM_TEST`, `TRAJECTORY_SAMPLING`, `SAVE_IMG_GAP`, etc.
-2. Run `/eval/test_driver.py`
+**Status:** This project is part of ongoing research. The related paper is currently under submission.
 
-## Files
-* `parameters.py` Training parameters.
-* `driver.py` Driver of training program, maintain & update the global network.
-* `runner.py` Wrapper of the local network.
-* `worker.py` Interact with environment and collect episode experience.
-* `attention_net.py` Define context-aware attention-based network.
-* `env.py` Informative path planning environment.
-* `gp_ipp.py` Gaussian Process and metrics calculation.
-* `/eval` Test files for evaluation, similar to training.
-* `/classes` Utilities for generating graph, ground truth, etc.
-* `/model` Trained model.
+## Table of Contents
 
-### Demo of trajectory sampling variant CAtNIPP
-![ts_demo](./result/ts_demo.gif)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Citation](#citation)
 
-### Requirements
-```
-python>=3.6
-numpy>=1.17
-ray>=1.15  % Ray should match python version
-pytorch>=1.7
-scipy
-scikit-learn
-matplotlib
-imageio
-shapely
+
+## Usage
+
+To run the project, use the following command:
+
+```bash
+python driver.py
 ```
 
-### Cite
+## Dependencies
+
+This project is based on the work presented in the following reference:
 ```
 @InProceedings{cao2022catnipp,
   title = {Context-Aware Attention-based Network for Informative Path Planning},
@@ -50,9 +31,14 @@ shapely
 }
 ```
 
-### Authors
-[Yuhong Cao](https://github.com/caoyuhong001)\
-[Yizhuo Wang](https://github.com/wyzh98)\
-[Apoorva Vashisth](https://github.com/AccGen99)\
-[Haolin Fan](https://github.com/FHL1998)\
-[Guillaume Sartoretti](https://github.com/gsartoretti)
+## Citation
+
+```
+@InProceedings{IPP_IRLIDS,
+  title     = {CARS:Context-Aware Reinforcement Learning Strategies in Non-Static Environments},
+  author    = {Ziyuan Liu, Yan Zhuang},
+  year      = {2025}
+}
+```
+
+
