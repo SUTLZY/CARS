@@ -1,14 +1,31 @@
-# CARS
+# CARS: Context-Aware Reinforcement Learning Strategies in Non-Static Environments
 
-**CARS** employs an off-policy Deep Reinforcement Learning (DRL) framework, effectively circumventing the limitations observed in on-policy approaches and enhancing learning adaptability and efficiency.
+## Overview
+**CARS** is a novel reinforcement learning (RL) framework designed to enhance adaptability and effectiveness in dynamic and unpredictable environments. Traditional RL methods struggle with non-static settings due to their reliance on fixed transition dynamics and reward functions. CARS overcomes these challenges by integrating context-aware inference and adaptive decision-making strategies.
 
 **Status:** This project is part of ongoing research. The related paper is currently under submission.
 
 ## Table of Contents
 
+- [Key Features](#Features)
+- [Architecture](#Architecture)
 - [Usage](#usage)
 - [Dependencies](#dependencies)
 - [Citation](#citation)
+
+## Key Features
+- **Context-Aware Inference Network (CAIN):** Dynamically infers latent context shifts from observational data.
+- **Belief Markov Decision Process (MDP):** Optimizes decision-making using inferred belief contexts.
+- **Forward Dynamics Model:** Improves generalization to unseen dynamics.
+- **Proximal Policy Optimization (PPO):** Reinforcement learning algorithm used for policy optimization.
+- **Robust Performance:** Demonstrated effectiveness in handling sudden environmental changes.
+
+## Architecture
+1. **Context Inference:** CAIN processes observational data to detect environmental shifts.
+2. **Belief-Based Decision Making:** The inferred context guides policy adaptation using a belief MDP framework.
+3. **Generalization Enhancement:** A forward dynamics model improves adaptability to unseen conditions.
+4. **PPO-based Optimization:** Reinforcement learning is performed using PPO for stable policy updates.
+
 
 
 ## Usage
@@ -40,5 +57,10 @@ This project is based on the work presented in the following reference:
   year      = {2025}
 }
 ```
+
+
+
+## License
+This project is licensed under the MIT License.
 
 
